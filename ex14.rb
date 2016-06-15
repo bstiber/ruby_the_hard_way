@@ -1,5 +1,7 @@
+# BIll = AGRV
+
 user_name = ARGV.first
-prompt = '>'
+prompt = 'Enter your thoughts here =>'
 
 puts "Hi #{user_name}."
 puts "I'd like to ask you a few questions."
