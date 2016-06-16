@@ -1,9 +1,10 @@
 filename = ARGV.first
+prompt = '>'
 
 puts "were going to erase #{filename}."
 puts "If you don't want that hit control-C (^C)."
 puts "If you don't want that hit Return."
-
+prompt = ">"
 $stdin.gets
 
 puts "Opening the file."
