@@ -1,5 +1,7 @@
-# test5.rb
-user_name = ARGV.first
-prompt = 'Enter your thoughts here =>'
+filename = ARGV.first
 
-puts "Hi, #{user_name}."
+txt = open(filename)
+
+puts "Here is your file \'#{filename}\'.\n"
+puts
+print txt.read
