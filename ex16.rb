@@ -1,3 +1,4 @@
+# activates the ARGV so that it can take a argument as the file opens
 filename = ARGV.first
 prompt = '>'
 
@@ -10,6 +11,7 @@ $stdin.gets
 puts "Opening the file."
 target = open(filename, 'w')
 
+# not sure we need this line?
 puts "Truncating the file.  Goodbye!"
 target.truncate(0)
 
@@ -20,12 +22,12 @@ print "Line 2: "; line2 = $stdin.gets.chomp
 print "Line 3: "; line3 = $stdin.gets.chomp
 
 puts "I'm going to write these to the file."
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line2)
-target.write("\n")
+target.write("line1: #{line1} line2: #{line2} line3: #{line3}")
+# target.write("\n")
+# target.write(line2)
+# target.write("\n")
+# target.write(line3)
+# target.write("\n")
 
 puts "And finally we close it. "
 target.close
