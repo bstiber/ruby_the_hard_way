@@ -67,6 +67,9 @@ target.truncate(0)
 # from the ARGV script in Ruby command line when opeing the file.
 target.write(line1)
 
+# calling the method read on in_file variable, then assigning it to the indata variable.
+indata = in_file.read
+
 # following definitions explain read, write etc.
  close -- Closes the file. Like File->Save.. in your editor.
  read -- Reads the contents of the file. You can assign the result to a variable.
