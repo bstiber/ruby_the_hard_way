@@ -1,1 +1,3 @@
-line1: lines] line2: amd more line3: lines
+this is a test of the file
+system and all that is
+included in this mess.

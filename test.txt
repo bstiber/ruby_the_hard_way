@@ -1,1 +1,3 @@
-line1: lines] line2: amd more line3: lines
+Line one is a blast!
+line 2 is slow and honery
+line 3 is watching TV
