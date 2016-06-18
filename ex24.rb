@@ -17,3 +17,6 @@ puts "---------------"
 puts poem
 puts "---------------"
 puts
+
+five = 10 - 2 + (30/4)
+puts "this should be #{five.to_f}."
