@@ -76,3 +76,9 @@ indata = in_file.read
  readline -- Reads just one line of a text file.
  truncate -- Empties the file. Watch out if you care about the file.
  write('stuff') -- Writes "stuff" to the file.
+
+# creating a method(or function) called print_two_again and assigning two parameters (arg1 and arg2).
+# then printing (whatever) is passed into the parameters as arguments to the screen.
+def print_two_again(arg1, arg2)
+  puts "arg1: #{arg1}, arg2: #{arg2}"
+end
