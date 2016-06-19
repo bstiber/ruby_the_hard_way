@@ -15,3 +15,11 @@ def ex25.print_first_word(words)
 end
 
 def ex25.print_last_word(words)
+  word = words.pop
+  puts word
+end
+
+def e25.sort_sentence(sentence)
+  words = ex25.break_words(sentence)
+return ex25.sort_words(words)
+end
