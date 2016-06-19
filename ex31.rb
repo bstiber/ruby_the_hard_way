@@ -21,6 +21,20 @@ bear = $stdin.gets.chomp
 end
 
 elsif door == '2'
+  puts "you stare at the endsless abyss at Cthulhu's retina."
+  puts "1. blueberries."
+  puts "2. yellow jacket clothespins."
+  puts "3. understanding revolvers yelling mellodies."
 
+print command
+insanity = $stdin.gets.chomp
 
+  if insanity == '1' || insanity == '2'
+    puts " you body survived powered by mind of jello,.Good Job!"
+  else
+    puts "the insanity rots your eyes into a pool of muck., Good job."
+  end
+
+else
+  puts " you stumble around and fall on a knife and die., Good job!"
 end
