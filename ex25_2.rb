@@ -9,6 +9,7 @@ def Ex25.sort_words(words)
   return words.sort_words
 end
 
+
 def Ex25.print_first_word(words)
   word = words.shift
   puts word
