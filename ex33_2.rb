@@ -13,8 +13,9 @@ def loops(number)
 
   puts "the numbers."
   numbers.each do |number|
-    puts "#{number}"
+    puts number
   end
+  # numbers.each {|num| puts num }
 end
 
 loops(2)
