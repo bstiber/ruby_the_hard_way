@@ -1,69 +1,35 @@
 # Write a game yourself and check your code a little along the way.  The following
 # game is a copy from ex35 re-formatted to read better.
 
-def start
-  puts "You are in a dark room."
-  puts "There is a door to your right and left."
-  puts "Which one do you take?"
+# This game is based on the movie Revenge:
+# write this game about the graysons, do you take revenge?
+
+def party
+
+  puts "your invited to a new years eve party at Grayson Manor in the Hamptons."
+  puts "do you attend the festivities? (yes or no). "
 
   print "> "
-  choice = $stdin.gets.chomp
+  attend = $stdin.gets.chomp
 
-  if choice == 'left'
-    bear_room
-  elsif choice == 'right'
-    cthulhu_room
+  if attend == 'yes'
+    its_a_trap("you are snared in a trap, what do you do?")
+  elsif attend == 'no'
+    your_safe("a bullet just missed your head.")
   else
-    dead('you stumble around until you starve.')
+    party
+    # long_life
   end
 end
 
-def bear_room
- puts "There is a bear here."
- puts "The bear has a bunch of honey."
- puts "The fat bear is in front of another door."
- puts "How are you going to move the bear?"
- bear_moved = false
-
- while true
-   print "> "
-   choice = $stdin.gets.chomp
-
-   if choice == 'take honey'
-     dead('the bear looks at you and slaps your face off.')
-   elsif choice == 'taunt bear' && !bear_moved
-     puts "the bear moved.. You can go through the door."
-     bear_moved = true
-   elsif choice == 'taunt bear' && bear_moved
-     dead('the bear gets pissed off and chews your leg off.')
-   elsif choice == 'open door' || bear_moved
-     gold_room
-   else
-     puts "i got no idea what that means. take honey, taunt bear, open door or bear_moved."
-   end
- end
+def its_a_trap(trap)
+    puts trap, "good job, dummy.."
+    puts "to exit enter exit(0)"
+    exit(0)
 end
 
-def cthulhu_room
-  puts "Here you see the great evil Cthulhu."
-  puts "He, it, whatever stares at you and you go insane."
-  puts "Do you flee for your life or eat your head?"
-
-  print "> "
-  choice = $stdin.gets.chomp
-
-  if choice.include? "flee"
-    start
-  elsif choice.include? "head"
-   dead('well that was tasty!')
-  else
-    cthulhu_room
-  end
+def your_safe(safe)
+    p safe, "whew you made it."
 end
 
-def dead(why)
-  puts why, "good job"
-  exit(0)
-end
-
-start
+party
