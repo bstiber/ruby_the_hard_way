@@ -13,7 +13,8 @@ def party
   attend = $stdin.gets.chomp
 
   if attend == 'yes'
-    its_a_trap("you are snared in a trap, what do you do?")
+    its_a_trap("you are snared, the invitation was a trap!")
+
   elsif attend == 'no'
     your_safe("a bullet just missed your head.")
   else
@@ -23,10 +24,39 @@ def party
 end
 
 def its_a_trap(trap)
-    puts trap, "good job, dummy.."
-    puts "to exit enter exit(0)"
-    exit(0)
+    puts trap, "hmm.."
+    puts "\tthe guards are holding you captive"
+    puts "\tdo you flee, or fight the guards and join the banquet?"
+    puts
+    print "> "
+    trapped = $stdin.gets.chomp
+
+    if trapped == 'flee'
+      flee("test")
+    elsif trapped == 'fight'
+      your_safe("hard to belive you made it this far!")
+    else
+      its_a_trap("You didn't answer correctly! flee or fight.?")
+  end
 end
+
+def flee(fight)
+  puts " \tyou made it past the guards but were struck on the head,"
+  puts "\tand stumbled down the hall.  you feel woozy, everything is blurry"
+  puts "\tyou come to a door where party noise can be faintly heard behind the door."
+  puts "\tdo you enter the door, yes or no?"
+  puts
+  print "> "
+  fled = $stdin.gets.chomp
+
+  if fled == 'yes'
+    flee(" you need to make a decision now!")
+  elsif fled == 'no'
+  else
+    flee(" you need to make a decision now!")
+  end
+end
+
 
 def your_safe(safe)
     p safe, "whew you made it."
